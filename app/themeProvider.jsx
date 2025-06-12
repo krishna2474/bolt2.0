@@ -44,12 +44,12 @@ export function ThemeProvider({ children, ...props }) {
     };
 
     checkAuth();
-    const timer = setTimeout(() => setShowPreloader(false), 2500);
+    // const timer = setTimeout(() => setShowPreloader(false), 2500);
     return () => clearTimeout(timer);
   }, []);
 
-  const shouldDelayRender = loadingUser || showPreloader;
-  if (shouldDelayRender) return <Preloader />;
+  const shouldDelayRender = loadingUser;
+  // if (shouldDelayRender) return <Preloader />;
 
   return (
     <GoogleOAuthProvider
