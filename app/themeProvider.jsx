@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import Preloader from "@/components/custom/Preloader";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/custom/AppSideBar";
 
 export function ThemeProvider({ children, ...props }) {
   const [message, setMessage] = useState([]);
