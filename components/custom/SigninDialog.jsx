@@ -59,10 +59,10 @@ const SigninDialog = ({ openDialog, closeDialog }) => {
     <Dialog open={openDialog} onOpenChange={closeDialog}>
       <DialogContent className="max-w-xl text-center">
         <DialogHeader className="text-center">
-          <DialogTitle className="text-3xl pt-8 font-bold">
+          <DialogTitle className="text-3xl pt-8 font-bold text-center">
             Continue with Bolt 2.0
           </DialogTitle>
-          <DialogDescription className="text-white/50 mt-2">
+          <DialogDescription className="text-white/50 mt-2 text-center">
             Log into your existing account or create a new one to get started.
           </DialogDescription>
         </DialogHeader>
