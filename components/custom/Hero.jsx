@@ -43,7 +43,7 @@ const Hero = () => {
     const workspaceId = response.data.id;
     router.push(`/workspace/${workspaceId}`);
   };
-  const sidebarOpen = localStorage.getItem("sidebarOpen");
+  // const sidebarOpen = localStorage.getItem("sidebarOpen");
 
   return (
     <div className="flex flex-col items-center justify-center ml-[28rem]">
