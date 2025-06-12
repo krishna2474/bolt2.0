@@ -6,30 +6,11 @@ import { UserContext } from "@/context/UserContext";
 import { useEffect, useState } from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
-import Preloader from "@/components/custom/Preloader";
 
 export function ThemeProvider({ children, ...props }) {
   const [message, setMessage] = useState([]);
   const [user, setUser] = useState(null);
   const [loadingUser, setLoadingUser] = useState(true);
-  const [showPreloader, setShowPreloader] = useState(true);
-
-  useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
-
-    if (!hasVisited) {
-      localStorage.setItem("hasVisited", "true");
-      setShowPreloader(true);
-
-      const timer = setTimeout(() => {
-        setShowPreloader(false);
-      }, 2500);
-
-      return () => clearTimeout(timer);
-    } else {
-      setShowPreloader(false);
-    }
-  }, []);
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -81,7 +62,7 @@ export function ThemeProvider({ children, ...props }) {
               <Header />
               <div className="flex flex-1">
                 {/* <SidebarProvider defaultOpen={true}> */}
-                  {/* <AppSidebar className=""/> */}
+                {/* <AppSidebar className=""/> */}
                 {/* </SidebarProvider> */}
                 <main className="flex  flex-col items-center justify-center gap-4 p-4">
                   {children}
